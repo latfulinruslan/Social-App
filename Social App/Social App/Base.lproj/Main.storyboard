@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--RegisterVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Social_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RegisterVC" customModule="Social_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,6 +68,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="pushRegisterAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oX3-uu-Xks"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kui-5Y-Gpx">
                                 <rect key="frame" x="16" y="308" width="207" height="30"/>
@@ -118,7 +122,15 @@
                             <constraint firstAttribute="bottom" secondItem="olF-60-shx" secondAttribute="bottom" id="v0f-om-TFe"/>
                             <constraint firstItem="9e7-KA-KjM" firstAttribute="trailing" secondItem="WDo-9N-bA9" secondAttribute="trailing" id="vPM-9I-tJ8"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="v9E-X9-JYb"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTxt" destination="hWg-a8-5Zy" id="rZJ-X8-3G7"/>
+                        <outlet property="firstnameTxt" destination="W27-T6-qIW" id="P94-fk-tTX"/>
+                        <outlet property="lastnameTxt" destination="JTK-Xg-hjq" id="PFI-HN-G75"/>
+                        <outlet property="passwordTxt" destination="WDo-9N-bA9" id="A7X-sn-Of7"/>
+                        <outlet property="usernameTxt" destination="9e7-KA-KjM" id="gdt-B1-9Ne"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
