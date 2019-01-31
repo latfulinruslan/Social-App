@@ -37,22 +37,18 @@ class RegisterVC: UIViewController {
         } else {
         
             let url = URL(string: "http://localhost/Twitter/register.php")!
-            
             let request = NSMutableURLRequest(url: url)
-            
             request.httpMethod = "POST"
             
             let body = "username=\(usernameTxt.text!.lowercased())&password=\(passwordTxt.text!)&email=\(emailTxt.text!)&fullname=\(firstnameTxt.text!)%20\(lastnameTxt.text!)"
-            
             request.httpBody = body.data(using: String.Encoding.utf8)
             
             URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
                 
                 if error == nil {
-                    
                     DispatchQueue.main.async {
                         do {
-                            
+    
                             let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
                             
                             guard let parseJSON = json else {
@@ -63,13 +59,10 @@ class RegisterVC: UIViewController {
                             let id = parseJSON["id"]
                             
                             if id != nil {
-                                
                                 print(parseJSON)
-                            
                             }
                             
                         } catch {
-                            
                           print("Caught an error \(error)")
                         }
                     
