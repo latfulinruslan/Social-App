@@ -75,7 +75,7 @@ class RegisterVC: UIViewController {
                     
                     }
                 } else {
-                    print("error dataTask \(error)")
+                    print("error dataTask \(String(describing: error))")
                 }
             }).resume()
                 
