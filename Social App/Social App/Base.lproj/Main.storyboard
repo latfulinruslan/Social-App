@@ -329,7 +329,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="414" height="896"/>
+        <image name="background" width="1242" height="896"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="k1P-jv-o0S"/>
