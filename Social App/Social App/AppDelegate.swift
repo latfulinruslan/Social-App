@@ -12,11 +12,43 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    // image to be animated
+    let backgroundImageView = UIImageView()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        backgroundImageView.frame = CGRect(x: 0, y: 0 , width: self.window!.bounds.height * 1.386, height: self.window!.bounds.height)
+        backgroundImageView.image = UIImage(named: "background")
+        self.window!.addSubview(backgroundImageView)
+        
+        moveBgLeft()
+        
         return true
+    }
+    
+    func moveBgLeft(){
+        
+        UIView.animate(withDuration: 45, animations: {
+            self.backgroundImageView.frame.origin.x = -self.backgroundImageView.bounds.width + self.window!.bounds.width
+        }) { (finished: Bool) in
+            
+            if finished {
+                self.moveBgRight()
+            }
+        }
+    }
+    
+    func moveBgRight() {
+        UIView.animate(withDuration: 45, animations: {
+            self.backgroundImageView.frame.origin.x = 0
+            
+        }) { (finished: Bool) in
+            if finished {
+                self.moveBgLeft()
+            }
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
