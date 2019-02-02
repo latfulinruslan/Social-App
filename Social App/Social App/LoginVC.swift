@@ -58,12 +58,26 @@ class LoginVC: UIViewController {
                             //
                         } else {
                             //
+                            DispatchQueue.main.async {
+                                
+                                let message = parseJSON["message"] as! String
+                                appDelegate.infoView(message: message, color: colorSmoothRed)
+                            }
+                            
                         }
                     } catch {
-                        print("Caught an error \(error)")
+                        DispatchQueue.main.async {
+                            
+                            let message = error as! String
+                            appDelegate.infoView(message: message, color: colorSmoothRed)
+                        }
                     }
                 } else {
-                    print("Error: \(error)")
+                    DispatchQueue.main.async {
+                        
+                        let message = error!.localizedDescription
+                        appDelegate.infoView(message: message, color: colorSmoothRed)
+                    }
                 }
             }).resume()
             

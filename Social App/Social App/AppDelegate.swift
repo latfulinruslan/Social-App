@@ -7,6 +7,11 @@
 //
 
 import UIKit
+let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+let colorSmoothRed = UIColor(red: 255/255, green: 50/255, blue: 75/255, alpha: 1)
+let colorLightGreen = UIColor(red: 40/255, green: 255/255, blue: 125/255, alpha: 1)
+
+let fontSize12 = UIScreen.main.bounds.width / 31
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // image to be animated
     let backgroundImageView = UIImageView()
+    
+    var infoViewIsShowing = false
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -30,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func moveBgLeft(){
         
-        UIView.animate(withDuration: 45, animations: {
+        UIView.animate(withDuration: 30, animations: {
             self.backgroundImageView.frame.origin.x = -self.backgroundImageView.bounds.width + self.window!.bounds.width
         }) { (finished: Bool) in
             
@@ -41,12 +48,73 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func moveBgRight() {
-        UIView.animate(withDuration: 45, animations: {
+        UIView.animate(withDuration: 30, animations: {
             self.backgroundImageView.frame.origin.x = 0
             
         }) { (finished: Bool) in
             if finished {
                 self.moveBgLeft()
+            }
+        }
+    }
+    
+    
+    func infoView(message message: String, color: UIColor){
+        
+        if !infoViewIsShowing {
+            
+            infoViewIsShowing = true
+            
+            //red backgroud
+            
+            let infoViewHeight = self.window!.bounds.height / 11
+            let infoViewY = 0 - infoViewHeight
+            
+            
+            let infoView = UIView(frame: CGRect(x: 0, y: infoViewY, width: self.window!.bounds.width, height: infoViewHeight))
+            infoView.backgroundColor = color
+            self.window!.addSubview(infoView)
+            
+            
+            // show info text
+            let infoLabelWidht = infoView.bounds.width
+            let infoLabelHeight = infoView.bounds.height + UIApplication.shared.statusBarFrame.height / 2
+            
+            let infoLabel = UILabel()
+            infoLabel.frame.size.width = infoLabelWidht
+            infoLabel.frame.size.height = infoLabelHeight
+            infoLabel.numberOfLines = 0
+            
+            infoLabel.text = message
+            infoLabel.font = UIFont(name: "AvenirNext", size: fontSize12)
+            infoLabel.textColor = .white
+            infoLabel.textAlignment = .center
+            
+            infoView.addSubview(infoLabel)
+            
+            //animate errorView
+            UIView.animate(withDuration: 0.2, animations: {
+                infoView.frame.origin.y = 0
+                
+            }) { (finished) in
+                
+                if finished {
+                    
+                    UIView.animate(withDuration:  0.1, delay: 4, options: .curveLinear, animations: {
+
+                        //move up errorView
+                        infoView.frame.origin.y = infoViewY
+                        
+                    }, completion: { (finished) in
+                        
+                        if finished {
+                            infoView.removeFromSuperview()
+                            infoLabel.removeFromSuperview()
+                            self.infoViewIsShowing = false
+                        }
+                    })
+                    
+                }
             }
         }
     }

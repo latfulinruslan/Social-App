@@ -60,15 +60,29 @@ class RegisterVC: UIViewController {
                             
                             if id != nil {
                                 print(parseJSON)
+                            } else {
+                                DispatchQueue.main.async {
+                                    
+                                    let message = parseJSON["message"] as! String
+                                    appDelegate.infoView(message: message, color: colorSmoothRed)
+                                }
                             }
                             
                         } catch {
-                          print("Caught an error \(error)")
+                            DispatchQueue.main.async {
+                                
+                                let message = error as! String
+                                appDelegate.infoView(message: message, color: colorSmoothRed)
+                            }
                         }
                     
                     }
                 } else {
-                    print("error dataTask \(String(describing: error))")
+                    DispatchQueue.main.async {
+                        
+                        let message = error!.localizedDescription
+                        appDelegate.infoView(message: message, color: colorSmoothRed)
+                    }
                 }
             }).resume()
                 
