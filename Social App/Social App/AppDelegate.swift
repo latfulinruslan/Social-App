@@ -13,6 +13,8 @@ let colorLightGreen = UIColor(red: 40/255, green: 255/255, blue: 125/255, alpha:
 
 let fontSize12 = UIScreen.main.bounds.width / 31
 
+var user: NSDictionary?
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -31,6 +33,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.addSubview(backgroundImageView)
         
         moveBgLeft()
+        
+        user = UserDefaults.standard.value(forKey: "parseJSON") as? NSDictionary
+        print(user)
+        if user != nil {
+            let id = user!["id"] as? String
+            
+            if id != nil{
+                login()
+            }
+        }
         
         return true
     }
@@ -117,6 +129,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
+    }
+    
+    func login() {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let tabBar = storyboard.instantiateViewController(withIdentifier: "tabBar")
+        
+        window?.rootViewController = tabBar
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

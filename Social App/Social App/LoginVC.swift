@@ -56,6 +56,12 @@ class LoginVC: UIViewController {
                         let id = parseJSON["id"] as? String
                         if id != nil {
                             //
+                            UserDefaults.standard.set(parseJSON, forKey: "parseJSON")
+                            user = UserDefaults.standard.object(forKey: "parseJSON") as? NSDictionary
+                            
+                            DispatchQueue.main.async {
+                                appDelegate.login()
+                            }
                         } else {
                             //
                             DispatchQueue.main.async {

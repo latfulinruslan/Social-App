@@ -59,7 +59,14 @@ class RegisterVC: UIViewController {
                             let id = parseJSON["id"]
                             
                             if id != nil {
-                                print(parseJSON)
+                                
+                                UserDefaults.standard.set(parseJSON, forKey: "parseJSON")
+                                user = UserDefaults.standard.object(forKey: "parseJSON") as? NSDictionary
+                                
+                                DispatchQueue.main.async {
+                                    appDelegate.login()
+                                }
+                                
                             } else {
                                 DispatchQueue.main.async {
                                     
