@@ -16,7 +16,7 @@ class TabBarVC: UITabBarController {
         self.tabBar.tintColor = .white
         
         //gray color
-        let color = UIColor(red: 180/255, green: 180/255, blue: 180/255, alpha: 1)
+        let color = UIColor(red: 222/255, green: 222/255, blue: 222/255, alpha: 1)
         
         self.tabBar.barTintColor = UIColor(red: 45/255, green: 213/255, blue: 255/255, alpha: 1)
         
