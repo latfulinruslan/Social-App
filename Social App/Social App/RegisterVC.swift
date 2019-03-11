@@ -39,9 +39,12 @@ class RegisterVC: UIViewController {
             let url = URL(string: "http://localhost/Twitter/register.php")!
             let request = NSMutableURLRequest(url: url)
             request.httpMethod = "POST"
+//            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             
             let body = "username=\(usernameTxt.text!.lowercased())&password=\(passwordTxt.text!)&email=\(emailTxt.text!)&fullname=\(firstnameTxt.text!)%20\(lastnameTxt.text!)"
             request.httpBody = body.data(using: String.Encoding.utf8)
+            
+            print(body)
             
             URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
                 
@@ -110,4 +113,17 @@ class RegisterVC: UIViewController {
     
 
 }
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
 

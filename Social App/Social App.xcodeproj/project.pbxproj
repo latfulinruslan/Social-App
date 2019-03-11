@@ -15,6 +15,7 @@
 		BC869ECF22035636004397B5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC869ECE22035636004397B5 /* LoginVC.swift */; };
 		BC869ED1220469DB004397B5 /* ResetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC869ED0220469DB004397B5 /* ResetVC.swift */; };
 		BC869ED322079386004397B5 /* NavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC869ED222079386004397B5 /* NavigationVC.swift */; };
+		BC869ED522079659004397B5 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC869ED422079659004397B5 /* TabBarVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BC869ECE22035636004397B5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		BC869ED0220469DB004397B5 /* ResetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetVC.swift; sourceTree = "<group>"; };
 		BC869ED222079386004397B5 /* NavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
+		BC869ED422079659004397B5 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				BC869EBC2200F96B004397B5 /* AppDelegate.swift */,
-				BC869EBE2200F96B004397B5 /* RegisterVC.swift */,
-				BC869ED222079386004397B5 /* NavigationVC.swift */,
 				BC869ECE22035636004397B5 /* LoginVC.swift */,
+				BC869EBE2200F96B004397B5 /* RegisterVC.swift */,
 				BC869ED0220469DB004397B5 /* ResetVC.swift */,
+				BC869ED222079386004397B5 /* NavigationVC.swift */,
+				BC869ED422079659004397B5 /* TabBarVC.swift */,
 				BC869EC02200F96B004397B5 /* Main.storyboard */,
 				BC869EC32200F96C004397B5 /* Assets.xcassets */,
 				BC869EC52200F96C004397B5 /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 				BC869EBF2200F96B004397B5 /* RegisterVC.swift in Sources */,
 				BC869EBD2200F96B004397B5 /* AppDelegate.swift in Sources */,
 				BC869ECF22035636004397B5 /* LoginVC.swift in Sources */,
+				BC869ED522079659004397B5 /* TabBarVC.swift in Sources */,
 				BC869ED322079386004397B5 /* NavigationVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HPCCB6JMP8;
 				INFOPLIST_FILE = "Social App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -312,6 +317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HPCCB6JMP8;
 				INFOPLIST_FILE = "Social App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
