@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC5D2A7A2237187C0004CBD6 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5D2A792237187C0004CBD6 /* HomeVC.swift */; };
 		BC869EBD2200F96B004397B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC869EBC2200F96B004397B5 /* AppDelegate.swift */; };
 		BC869EBF2200F96B004397B5 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC869EBE2200F96B004397B5 /* RegisterVC.swift */; };
 		BC869EC22200F96B004397B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC869EC02200F96B004397B5 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC5D2A792237187C0004CBD6 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		BC869EB92200F96B004397B5 /* Social App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC869EBC2200F96B004397B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC869EBE2200F96B004397B5 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				BC869ECE22035636004397B5 /* LoginVC.swift */,
 				BC869EBE2200F96B004397B5 /* RegisterVC.swift */,
 				BC869ED0220469DB004397B5 /* ResetVC.swift */,
+				BC5D2A792237187C0004CBD6 /* HomeVC.swift */,
 				BC869ED222079386004397B5 /* NavigationVC.swift */,
 				BC869ED422079659004397B5 /* TabBarVC.swift */,
 				BC869EC02200F96B004397B5 /* Main.storyboard */,
@@ -151,6 +154,7 @@
 				BC869EBF2200F96B004397B5 /* RegisterVC.swift in Sources */,
 				BC869EBD2200F96B004397B5 /* AppDelegate.swift in Sources */,
 				BC869ECF22035636004397B5 /* LoginVC.swift in Sources */,
+				BC5D2A7A2237187C0004CBD6 /* HomeVC.swift in Sources */,
 				BC869ED522079659004397B5 /* TabBarVC.swift in Sources */,
 				BC869ED322079386004397B5 /* NavigationVC.swift in Sources */,
 			);

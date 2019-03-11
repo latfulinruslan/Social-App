@@ -234,43 +234,71 @@
             </objects>
             <point key="canvasLocation" x="-530.39999999999998" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--HomeVC-->
         <scene sceneID="SfG-QV-uMa">
             <objects>
-                <viewController id="xLb-VS-mKJ" sceneMemberID="viewController">
+                <viewController id="xLb-VS-mKJ" customClass="HomeVC" customModule="Social_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E5x-1Z-TXl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultImageProfile" translatesAutoresizingMaskIntoConstraints="NO" id="jOb-zW-bTv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImageProfile" translatesAutoresizingMaskIntoConstraints="NO" id="jOb-zW-bTv">
                                 <rect key="frame" x="16" y="17" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="WWp-e3-vZm"/>
+                                    <constraint firstAttribute="width" constant="120" id="lxY-ze-APm"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWm-x0-gqp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWm-x0-gqp">
                                 <rect key="frame" x="144" y="17" width="215" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="FHj-YD-ZUj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3w-S7-nln">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3w-S7-nln">
                                 <rect key="frame" x="144" y="46" width="215" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="0fI-ce-JY6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="email@domain.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfd-ZO-EpD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email@domain.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfd-ZO-EpD">
                                 <rect key="frame" x="144" y="75" width="215" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="reE-bI-39H"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jOb-zW-bTv" firstAttribute="leading" secondItem="E5x-1Z-TXl" secondAttribute="leadingMargin" id="0zt-kw-4h6"/>
+                            <constraint firstItem="v3w-S7-nln" firstAttribute="leading" secondItem="hfd-ZO-EpD" secondAttribute="leading" id="3j9-CM-QAw"/>
+                            <constraint firstItem="jOb-zW-bTv" firstAttribute="top" secondItem="E5x-1Z-TXl" secondAttribute="topMargin" constant="17" id="76U-x1-F1h"/>
+                            <constraint firstItem="OWm-x0-gqp" firstAttribute="leading" secondItem="v3w-S7-nln" secondAttribute="leading" id="8j0-BM-GQc"/>
+                            <constraint firstItem="v3w-S7-nln" firstAttribute="top" secondItem="OWm-x0-gqp" secondAttribute="bottom" constant="8" symbolic="YES" id="9S5-bu-Y3Y"/>
+                            <constraint firstItem="hfd-ZO-EpD" firstAttribute="top" secondItem="v3w-S7-nln" secondAttribute="bottom" constant="8" symbolic="YES" id="FFl-bV-8SP"/>
+                            <constraint firstItem="OWm-x0-gqp" firstAttribute="trailing" secondItem="E5x-1Z-TXl" secondAttribute="trailingMargin" id="RoQ-X6-exu"/>
+                            <constraint firstItem="jOb-zW-bTv" firstAttribute="top" secondItem="OWm-x0-gqp" secondAttribute="top" id="gkq-Nc-kvQ"/>
+                            <constraint firstItem="OWm-x0-gqp" firstAttribute="leading" secondItem="jOb-zW-bTv" secondAttribute="trailing" constant="8" symbolic="YES" id="itu-Ku-LGC"/>
+                            <constraint firstItem="v3w-S7-nln" firstAttribute="trailing" secondItem="hfd-ZO-EpD" secondAttribute="trailing" id="vyT-9e-Tjt"/>
+                            <constraint firstItem="OWm-x0-gqp" firstAttribute="trailing" secondItem="v3w-S7-nln" secondAttribute="trailing" id="ym1-a0-ZiM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fHT-Sv-gjX"/>
+                    <connections>
+                        <outlet property="emailLbl" destination="hfd-ZO-EpD" id="0Uo-yj-lfw"/>
+                        <outlet property="fullNameLbl" destination="v3w-S7-nln" id="wLO-CZ-5M9"/>
+                        <outlet property="profileImage" destination="jOb-zW-bTv" id="Wdz-bh-umY"/>
+                        <outlet property="usernameLbl" destination="OWm-x0-gqp" id="bSl-7x-VeR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UI9-rx-cwr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
