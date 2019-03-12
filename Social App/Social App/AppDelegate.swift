@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         moveBgLeft()
         
         user = UserDefaults.standard.value(forKey: "parseJSON") as? NSDictionary
-        print(user)
+        //print(user)
         if user != nil {
             let id = user!["id"] as? String
             
