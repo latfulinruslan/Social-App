@@ -54,6 +54,10 @@ class HomeVC: UIViewController {
 
             }
         }
+        
+        profileImage.layer.cornerRadius = profileImage.bounds.width / 20
+        profileImage.clipsToBounds = true
+        self.navigationItem.title = username
     }
     
     let imagePicker = UIImagePickerController();
@@ -180,19 +184,19 @@ class HomeVC: UIViewController {
                 }
             }
         }).resume()
+    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func pushLogoutAction(_ sender: Any) {
+        
+        UserDefaults.standard.removeObject(forKey: "parseJSON")
+        UserDefaults.standard.synchronize()
+        
+        
+//        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+//        self.present(loginVC, animated: true, completion: nil)
+        appDelegate.login(identifier: "LoginVC")
     }
-    */
-
-    }
+    
 }
 
 extension HomeVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

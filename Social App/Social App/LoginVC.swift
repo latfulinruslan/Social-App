@@ -60,7 +60,7 @@ class LoginVC: UIViewController {
                             user = UserDefaults.standard.object(forKey: "parseJSON") as? NSDictionary
                             
                             DispatchQueue.main.async {
-                                appDelegate.login()
+                                appDelegate.login(identifier: "tabBar")
                             }
                         } else {
                             //
@@ -74,7 +74,7 @@ class LoginVC: UIViewController {
                     } catch {
                         DispatchQueue.main.async {
                             
-                            let message = error as! String
+                            let message = error.localizedDescription
                             appDelegate.infoView(message: message, color: colorSmoothRed)
                         }
                     }

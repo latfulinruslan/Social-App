@@ -69,7 +69,7 @@ class ResetVC: UIViewController {
                         } catch {
                             DispatchQueue.main.async {
                                 
-                                let message = error as! String
+                                let message = error.localizedDescription
                                 appDelegate.infoView(message: message, color: colorSmoothRed)
                             }
                         }

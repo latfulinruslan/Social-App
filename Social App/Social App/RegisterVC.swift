@@ -67,7 +67,7 @@ class RegisterVC: UIViewController {
                                 user = UserDefaults.standard.object(forKey: "parseJSON") as? NSDictionary
                                 
                                 DispatchQueue.main.async {
-                                    appDelegate.login()
+                                    appDelegate.login(identifier: "tabBar")
                                 }
                                 
                             } else {

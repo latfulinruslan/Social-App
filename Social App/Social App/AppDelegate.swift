@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let id = user!["id"] as? String
             
             if id != nil{
-                login()
+                login(identifier: "tabBar")
             }
         }
         
@@ -131,13 +131,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    func login() {
+    func login(identifier: String) {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let tabBar = storyboard.instantiateViewController(withIdentifier: "tabBar")
+        let viewController = storyboard.instantiateViewController(withIdentifier: identifier)
         
-        window?.rootViewController = tabBar
+        window?.rootViewController = viewController
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
