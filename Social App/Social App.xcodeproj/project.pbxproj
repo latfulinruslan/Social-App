@@ -17,6 +17,7 @@
 		BC869ED1220469DB004397B5 /* ResetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC869ED0220469DB004397B5 /* ResetVC.swift */; };
 		BC869ED322079386004397B5 /* NavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC869ED222079386004397B5 /* NavigationVC.swift */; };
 		BC869ED522079659004397B5 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC869ED422079659004397B5 /* TabBarVC.swift */; };
+		BC9728A72253EB930056DD20 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9728A62253EB930056DD20 /* PostVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		BC869ED0220469DB004397B5 /* ResetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetVC.swift; sourceTree = "<group>"; };
 		BC869ED222079386004397B5 /* NavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
 		BC869ED422079659004397B5 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		BC9728A62253EB930056DD20 /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				BC5D2A792237187C0004CBD6 /* HomeVC.swift */,
 				BC869ED222079386004397B5 /* NavigationVC.swift */,
 				BC869ED422079659004397B5 /* TabBarVC.swift */,
+				BC9728A62253EB930056DD20 /* PostVC.swift */,
 				BC869EC02200F96B004397B5 /* Main.storyboard */,
 				BC869EC32200F96C004397B5 /* Assets.xcassets */,
 				BC869EC52200F96C004397B5 /* LaunchScreen.storyboard */,
@@ -156,6 +159,7 @@
 				BC869ECF22035636004397B5 /* LoginVC.swift in Sources */,
 				BC5D2A7A2237187C0004CBD6 /* HomeVC.swift in Sources */,
 				BC869ED522079659004397B5 /* TabBarVC.swift in Sources */,
+				BC9728A72253EB930056DD20 /* PostVC.swift in Sources */,
 				BC869ED322079386004397B5 /* NavigationVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
